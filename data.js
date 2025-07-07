@@ -21,3 +21,10 @@ const stations = [
     },
   ];
   
+  const wishlist = [
+    "Picnic Tables",
+    "Water Fountain",
+    "Dog Park",
+    "Bike Racks"
+  ];
+  

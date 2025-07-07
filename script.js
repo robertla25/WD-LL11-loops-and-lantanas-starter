@@ -10,7 +10,18 @@ function addStations(stations) {
 
 // 💌 Wishlist Renderer
 function renderWishlist() {
-  // TODO: Use forEach to display items in wishlist
+  const wishlistSection = document.getElementById("wishlist");
+  const ul = document.createElement("ul");
+
+  wishlist.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+
+  // Clear previous content and append the list
+  wishlistSection.innerHTML = "<h2>Wishlist Items</h2>";
+  wishlistSection.appendChild(ul);
 }
 
 // ❌ Search Feedback
@@ -36,3 +47,4 @@ function toggleFilteredStations() {
 
 // Load stations on page start
 addStations(stations);
+renderWishlist();
